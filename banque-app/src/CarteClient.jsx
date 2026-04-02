@@ -13,6 +13,12 @@ function CarteClient({ nom, solde }) {
     }}>
       <h3>Client : {nom}</h3>
       <p>Solde actuel : <strong>{solde} €</strong></p>
+      
+      {solde > 10000 && (
+  <p style={{ color: 'gold', fontWeight: 'bold', fontSize: '1.2em' }}>
+    ⭐ Client Premium (Accès VIP)
+  </p>
+)}
 
       {/* C'est ICI qu'on ajoute la mention manquante */}
       <p style={{ color: estDebiteur ? 'red' : 'green', fontWeight: 'bold' }}>
